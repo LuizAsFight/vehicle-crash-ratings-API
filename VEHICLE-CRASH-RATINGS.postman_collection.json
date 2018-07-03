@@ -1,0 +1,141 @@
+{
+	"info": {
+		"name": "Vehicle Crashing Ratings",
+		"_postman_id": "4121d004-6f94-db80-0c65-865d58c2c324",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{domain}}/ping",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"ping"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get vehicle list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{domain}}/vehicles/2015/Audi/A3",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"vehicles",
+						"2015",
+						"Audi",
+						"A3"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get vehicle list with ratings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{domain}}/vehicles/2015/Audi/A3?withRatings=true",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"vehicles",
+						"2015",
+						"Audi",
+						"A3"
+					],
+					"query": [
+						{
+							"key": "withRatings",
+							"value": "true",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get vehicle list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"modelYear\": 2015,\n    \"manufacturer\": \"Toyota\",\n    \"model\": \"Yaris\"\n}"
+				},
+				"url": {
+					"raw": "{{domain}}/vehicles",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"vehicles"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get vehicle list with ratings",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"modelYear\": 2015,\n    \"manufacturer\": \"Toyota\",\n    \"model\": \"Yaris\"\n}"
+				},
+				"url": {
+					"raw": "{{domain}}/vehicles?withRatings=true",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"vehicles"
+					],
+					"query": [
+						{
+							"key": "withRatings",
+							"value": "true",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
