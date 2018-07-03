@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/nodemon app/bin/www",
-    "start:debug": "./node_modules/.bin/nodemon --inspect app/bin/www"
+    "start": "PORT=8888 ./node_modules/.bin/nodemon app/bin/www",
+    "start:debug": "PORT=8888 ./node_modules/.bin/nodemon --inspect app/bin/www"
   },
   "author": "keep-faith",
   "dependencies": {
